@@ -9,7 +9,7 @@ public class MainProgram {
         
         menu.display();
         
-        System.out.println("Good-bye");
+        System.out.println("Thank you for browsing the General Authority Database. \nHave a nice day!");
     }
 
 
