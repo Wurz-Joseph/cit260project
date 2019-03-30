@@ -37,10 +37,10 @@ public class MainMenu extends Menu {
     @Override
     protected MenuItem[] getMenuItems() {
         return new MenuItem[] { 
-                new MenuItem('1', "Display First Presidency"), 
-                new MenuItem('2', "Display Quorum of the Tweleve"),
-                new MenuItem('3', "Delete Apostle"),
-                new MenuItem('4', "Add Apostle"),
+                new MenuItem('1', "Prophet"), 
+                new MenuItem('2', "Apostle"),
+                new MenuItem('3', "Seventy"),
+                new MenuItem('4', "Sample"),
                 new MenuItem('Q', "Quit Program") 
         };
     }
