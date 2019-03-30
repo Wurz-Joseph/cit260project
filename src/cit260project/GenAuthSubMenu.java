@@ -34,8 +34,8 @@ public class GenAuthSubMenu extends Menu {
     @Override
     protected MenuItem[] getMenuItems() {
         return new MenuItem[] { 
-                new MenuItem('1', "Show list of Genaerl Authorities"), 
-                new MenuItem('2', "Add to the existing list"),
+                new MenuItem('1', "Show list of General Authorities"), 
+                new MenuItem('2', "Add to the existing file"),
                 new MenuItem('R', "Return to MainMenu") 
         };
     }

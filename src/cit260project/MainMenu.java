@@ -55,7 +55,8 @@ public class MainMenu extends Menu {
        
         switch (Character.toUpperCase(key)) {
             case '1':
-                System.out.println("Place holder for database access method 1");
+                Menu subMenu = new GenAuthSubMenu();
+                subMenu.display();
                 break;
             case '2':
                 System.out.println("Place holder for database access method 2");
