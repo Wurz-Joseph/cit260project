@@ -16,7 +16,7 @@ public class MainMenu extends Menu {
      */
     @Override
     protected String getTitle() {
-        return "MAIN MENU";
+        return "----------\nMAIN MENU\n----------";
     }
 
     /**
