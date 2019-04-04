@@ -1,14 +1,11 @@
 package cit260project;
 
-public class MainMenu extends Menu {
+public class GenAuthSubMenu extends Menu {
     
-    /**
-     * Default constructor. Does nothing.
-     */
-    public MainMenu() {
+    public GenAuthSubMenu() {
         super();
     }
-
+    
     /**
      * Provide the menu title (or null to skip).
      * 
@@ -16,7 +13,7 @@ public class MainMenu extends Menu {
      */
     @Override
     protected String getTitle() {
-        return "----------\nMAIN MENU\n----------";
+        return "Display General Authorities";
     }
 
     /**
@@ -26,7 +23,7 @@ public class MainMenu extends Menu {
      */
     @Override
     protected String getDescription() {
-        return "Welcome to the General Authority Database. \nPlease choose from the options below.";
+        return "Show list or add to existing file";
     }
 
     /**
@@ -37,11 +34,9 @@ public class MainMenu extends Menu {
     @Override
     protected MenuItem[] getMenuItems() {
         return new MenuItem[] { 
-                new MenuItem('1', "Prophet"), 
-                new MenuItem('2', "Apostle"),
-                new MenuItem('3', "Seventy"),
-                new MenuItem('4', "Sample"),
-                new MenuItem('Q', "Quit Program") 
+                new MenuItem('1', "Show list of General Authorities"), 
+                new MenuItem('2', "Add to the existing file"),
+                new MenuItem('R', "Return to MainMenu") 
         };
     }
 
@@ -55,20 +50,13 @@ public class MainMenu extends Menu {
        
         switch (Character.toUpperCase(key)) {
             case '1':
-                Menu subMenu = new GenAuthSubMenu();
-                subMenu.display();
+                System.out.println("Place holder for the getFile method");
                 break;
             case '2':
-                System.out.println("Place holder for database access method 2");
-                break;
-            case '3':
-                System.out.println("Place holder for database access method 3");
-                break;
-            case '4':
-                System.out.println("Place holder for database access method 4");
+                System.out.println("Place holder for the addToFile method");
                 break;
                 
-            case 'Q':
+            case 'R':
                 return false;
                 
             default:
@@ -80,4 +68,3 @@ public class MainMenu extends Menu {
     }
 
 }
-
