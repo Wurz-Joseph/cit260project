@@ -1,6 +1,5 @@
 package cit260project;
 
-
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -12,10 +11,10 @@ import java.util.GregorianCalendar;
  * @author 
  */
 public class GeneralAuthority {
-    
+	
+	private String office;
     private String name;
     private Calendar dateOfBirth;
-    private String office;
 	private String title;
 	private String dateSustained;
 	private String favoriteQuote;
@@ -43,6 +42,10 @@ public class GeneralAuthority {
         
         this.name = name;
         this.dateOfBirth = dateOfBirth;
+        this.office = office;
+        this.title = title;
+        this.dateSustained = dateSustained;
+        this.favoriteQuote = favoriteQuote;
     }
 
 
@@ -53,6 +56,7 @@ public class GeneralAuthority {
     public String getName() {
         return name;
     }
+    
 
     /**
      * Provide the person's date of birth

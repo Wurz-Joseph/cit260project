@@ -1,6 +1,5 @@
 package cit260project;
 
-
 import java.util.Scanner;
 
 /**

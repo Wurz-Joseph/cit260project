@@ -1,7 +1,13 @@
 package cit260project;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class MainMenu extends Menu {
-    
+	
+java.io.File sampleFile = new java.io.File("sample.txt");
+  
     /**
      * Default constructor. Does nothing.
      */
@@ -72,12 +78,12 @@ public class MainMenu extends Menu {
                 return false;
                 
             default:
-                System.out.println("Invalid Entry");
+                System.err.println("Invalid Entry");
                     
        }
         
        return true;
     }
-
+   
 }
 

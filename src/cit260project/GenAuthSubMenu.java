@@ -1,11 +1,9 @@
 package cit260project;
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintWriter;
 
 public class GenAuthSubMenu extends Menu {
 
@@ -32,7 +30,7 @@ public class GenAuthSubMenu extends Menu {
 	 */
 	@Override
 	protected String getDescription() {
-		return "Show list or add to existing file";
+		return "Show list or add to file";
 	}
 
 	/**
@@ -59,7 +57,7 @@ public class GenAuthSubMenu extends Menu {
 			System.out.println("Place holder for the readFile method");
 			break;
 		case '2':
-			System.out.println("Place holder for the addToFile method");
+			System.out.println("Placeholder for loadFile method");
 			break;
 		case 'R':
 			return false;
@@ -70,24 +68,20 @@ public class GenAuthSubMenu extends Menu {
 
 		return true;
 	}
+
 	/**
 	 * store apostles to file
+	 * 
 	 * @param apostles
 	 */
 	public void storeApostles(ArrayList<GeneralAuthority> apostles) {
 		File textFile = new File(FILEPATH);
 
-		try (PrintWriter out = new PrintWriter(new FileOutputStream(textFile))) {
-
-		} catch (FileNotFoundException exception) {
-			System.err.println("Could not find file path");
-
-		}
-
 	}
-	
+
 	/**
 	 * read apostles from file.
+	 * 
 	 * @return
 	 */
 	public ArrayList<GeneralAuthority> loadApostles() {
@@ -96,5 +90,37 @@ public class GenAuthSubMenu extends Menu {
 
 		return apostles;
 	}
-	
+
+	/**
+	 * Read Prophets from the file
+	 * 
+	 * @param scanner
+	 * @return User input of Prophet
+	 */
+	private GeneralAuthority readProphet(Scanner scanner) {
+		
+		return null;
+	}
+
+	/**
+	 * Read Apostles from file
+	 * 
+	 * @param scanner
+	 * @return User input of Apostle
+	 */
+	private GeneralAuthority readApostle(Scanner scanner) {
+		
+		return null;
+	}
+
+	/**
+	 * Read members of Seventy from file
+	 * 
+	 * @param scanner
+	 * @return User input of Seventy
+	 */
+	private GeneralAuthority readSeventy(Scanner scanner) {
+		
+		return null;
+	}
 }
