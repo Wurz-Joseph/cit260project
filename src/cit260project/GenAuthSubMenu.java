@@ -75,7 +75,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @param apostles
 	 */
 	public void storeApostles(ArrayList<GeneralAuthority> apostles) {
-		File textFile = new File(FILEPATH);
+		
 
 	}
 
