@@ -75,7 +75,11 @@ public class GenAuthSubMenu extends Menu {
 	 * @param apostles
 	 */
 	public void storeApostles(ArrayList<GeneralAuthority> apostles) {
-		
+		// Check if file exists
+	    
+	    // Create new file if none exists
+	    
+	    // Add to file if one exists
 
 	}
 
