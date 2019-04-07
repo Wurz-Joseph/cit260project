@@ -82,7 +82,7 @@ public class MainMenu extends Menu {
 
 		return true;
 	}
-	
+	// Method to read from existing file and print the the console
 	public Scanner readFile(File file) {
 		Scanner scanner = null;
 		try {

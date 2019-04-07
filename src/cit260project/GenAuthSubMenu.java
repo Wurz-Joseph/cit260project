@@ -113,7 +113,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @return User input of Apostle
 	 */
 	private GeneralAuthority readApostle(Scanner scanner) {
-		
+		//will return apostle info
 		return null;
 	}
 
@@ -124,7 +124,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @return User input of Seventy
 	 */
 	private GeneralAuthority readSeventy(Scanner scanner) {
-		
+		//will return seventy info
 		return null;
 	}
 }
