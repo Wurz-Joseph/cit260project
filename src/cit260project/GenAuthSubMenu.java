@@ -1,12 +1,14 @@
 package cit260project;
 
 import java.util.ArrayList;
-
+import java.util.Calendar;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.File;
+import java.io.PrintWriter;
 
 public class GenAuthSubMenu extends Menu {
-
 	private final String FILEPATH = "Apostles.txt";
 
 	public GenAuthSubMenu() {
@@ -43,6 +45,9 @@ public class GenAuthSubMenu extends Menu {
 		return new MenuItem[] { new MenuItem('1', "Show list of General Authorities"),
 				new MenuItem('2', "Add to the existing file"), new MenuItem('R', "Return to MainMenu") };
 	}
+	
+	
+
 
 	/**
 	 * Handle the user's menu selection.
@@ -54,10 +59,10 @@ public class GenAuthSubMenu extends Menu {
 
 		switch (Character.toUpperCase(key)) {
 		case '1':
-			System.out.println("Place holder for the readFile method");
+			//load from external file
 			break;
 		case '2':
-			System.out.println("Placeholder for loadFile method");
+			storeApostles(apostles);
 			break;
 		case 'R':
 			return false;
@@ -74,13 +79,35 @@ public class GenAuthSubMenu extends Menu {
 	 * 
 	 * @param apostles
 	 */
-	public void storeApostles(ArrayList<GeneralAuthority> apostles) {
-		// Check if file exists
-	    
-	    // Create new file if none exists
-	    
-	    // Add to file if one exists
+	ArrayList<GeneralAuthority> apostles = new ArrayList<GeneralAuthority>();
 
+	public void storeApostles(ArrayList<GeneralAuthority> apostles) {
+		//prompt to add G.A. data and read in values.
+		System.out.print("Full Name: ");
+		String name = scanner.nextLine();
+		
+		System.out.print("Office: ");
+		String office = scanner.nextLine();
+		
+		System.out.print("Favorite Quote: ");
+		String favoriteQuote = scanner.nextLine();
+		
+		//create new G.A. object
+		GeneralAuthority ga = new GeneralAuthority(name, office, favoriteQuote);
+		//add object to apostles arrayList
+		apostles.add(ga);
+
+		
+		try {
+			//create/append to Apostles.txt	
+			PrintWriter pw = new PrintWriter(new FileOutputStream(new File(FILEPATH),true));
+			//print to file
+			pw.println(apostles.toString());
+
+			pw.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -89,8 +116,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @return
 	 */
 	public ArrayList<GeneralAuthority> loadApostles() {
-
-		ArrayList<GeneralAuthority> apostles = new ArrayList<>();
+		System.out.println(apostles.toString());
 
 		return apostles;
 	}
@@ -102,7 +128,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @return User input of Prophet
 	 */
 	private GeneralAuthority readProphet(Scanner scanner) {
-		
+		//will return prophet info
 		return null;
 	}
 
@@ -113,7 +139,7 @@ public class GenAuthSubMenu extends Menu {
 	 * @return User input of Apostle
 	 */
 	private GeneralAuthority readApostle(Scanner scanner) {
-		//will return apostle info
+		// will return apostle info
 		return null;
 	}
 
@@ -124,7 +150,8 @@ public class GenAuthSubMenu extends Menu {
 	 * @return User input of Seventy
 	 */
 	private GeneralAuthority readSeventy(Scanner scanner) {
-		//will return seventy info
+		// will return seventy info
 		return null;
 	}
+
 }

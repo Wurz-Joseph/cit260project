@@ -14,7 +14,7 @@ public class Menu {
     // objects we might create will share this one
     // variable. That way we don't create a lot of
     // different Scanner objects in our application.
-    private static Scanner scanner;
+    protected static Scanner scanner;
 
     // This is a static initializer. It's like a constructor
     // for the class itself. It gets called when the class
@@ -86,7 +86,7 @@ public class Menu {
             String description = getDescription();
             if (description != null) {
                 System.out.println(description);
-                System.out.println();
+               System.out.println();
             }
 
             // print the menu items
@@ -110,7 +110,7 @@ public class Menu {
                 keepGoing = handleMenuSelection(userInput.charAt(0));
             }
             
-            System.out.println();
+            
         }
     }
 
@@ -139,6 +139,9 @@ public class Menu {
         } catch (Exception e) {
             // do nothing
         }
+        
+        
     }
+    
 
 }

@@ -43,10 +43,6 @@ public class MainMenu extends Menu {
 		return new MenuItem[] { new MenuItem('1', "Prophet"), new MenuItem('2', "Apostle"),
 				new MenuItem('3', "Seventy"), new MenuItem('4', "Sample"), new MenuItem('Q', "Quit Program") };
 	}
-	
-	
-	
-		
 
 	/**
 	 * Handle the user's menu selection.
@@ -82,17 +78,18 @@ public class MainMenu extends Menu {
 
 		return true;
 	}
+
 	// Method to read from existing file and print the the console
 	public Scanner readFile(File file) {
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(file);
-			
-			while(scanner.hasNextLine()) {
+
+			while (scanner.hasNextLine()) {
 				System.out.println(scanner.nextLine());
 			}
-		}catch (FileNotFoundException e) {
-			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			System.err.println("Error finding example file.");
 		}
 		return scanner;
 	}
