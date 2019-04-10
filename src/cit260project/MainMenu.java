@@ -54,18 +54,16 @@ public class MainMenu extends Menu {
 
 		switch (Character.toUpperCase(key)) {
 		case '1':
-			Menu subMenu = new GenAuthSubMenu();
-			subMenu.display();
+			
 			break;
 		case '2':
-			System.out.println("Place holder for database access method 2");
+			
 			break;
 		case '3':
-			System.out.println("Place holder for database access method 3");
+			
 			break;
 		case '4':
-			File sampleFile = new File("Sample.txt");
-			readFile(sampleFile);
+			
 			break;
 
 		case 'Q':
@@ -79,6 +77,16 @@ public class MainMenu extends Menu {
 		return true;
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	// Method to read from existing file and print the the console
 	public Scanner readFile(File file) {
 		Scanner scanner = null;

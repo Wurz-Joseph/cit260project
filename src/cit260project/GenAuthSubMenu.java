@@ -42,7 +42,7 @@ public class GenAuthSubMenu extends Menu {
 	 */
 	@Override
 	protected MenuItem[] getMenuItems() {
-		return new MenuItem[] { new MenuItem('1', "Show list of General Authorities"),
+		return new MenuItem[] { new MenuItem('1', "Show list of Prophets"),
 				new MenuItem('2', "Add to the existing file"), new MenuItem('R', "Return to MainMenu") };
 	}
 	
@@ -60,6 +60,8 @@ public class GenAuthSubMenu extends Menu {
 		switch (Character.toUpperCase(key)) {
 		case '1':
 			//load from external file
+			File prophetFile = new File("Prophets.txt");
+			readProphet(prophetFile);
 			break;
 		case '2':
 			storeApostles(apostles);
@@ -103,7 +105,6 @@ public class GenAuthSubMenu extends Menu {
 			PrintWriter pw = new PrintWriter(new FileOutputStream(new File(FILEPATH),true));
 			//print to file
 			pw.println(apostles.toString());
-
 			pw.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -127,9 +128,18 @@ public class GenAuthSubMenu extends Menu {
 	 * @param scanner
 	 * @return User input of Prophet
 	 */
-	private GeneralAuthority readProphet(Scanner scanner) {
-		//will return prophet info
-		return null;
+	private Scanner readProphet(File file) {
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(file);
+
+			while (scanner.hasNextLine()) {
+				System.out.println(scanner.nextLine());
+			}
+		} catch (FileNotFoundException e) {
+			System.err.println("Error finding file.");
+		}
+		return scanner;
 	}
 
 	/**

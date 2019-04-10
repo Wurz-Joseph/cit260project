@@ -37,9 +37,9 @@ public class GeneralAuthority extends Menu{
 		//this.dateSustained = dateSustained;
 		this.favoriteQuote = favoriteQuote;
 		// Enforce the "not null" part of our contract.
-		//if (name == null) {
-		//	throw new IllegalArgumentException("name cannot be null");
-		//}
+		if (name == null) {
+			throw new IllegalArgumentException("name cannot be null");
+		}
 
 		//if (dateOfBirth == null) {
 		//	throw new IllegalArgumentException("dateOfBrith cannot be null");
