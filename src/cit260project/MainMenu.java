@@ -63,6 +63,7 @@ public class MainMenu extends Menu {
             break;
         case '4':
             sampleFile();
+            prompt("Press enter to continue.\n\n\n");
             break;
         case 'Q':
             return false;
