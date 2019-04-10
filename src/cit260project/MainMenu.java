@@ -92,13 +92,15 @@ public class MainMenu extends Menu {
         Scanner scanner = null;
         try {
             scanner = new Scanner(file);
-
+            System.out.println();
+            
             while (scanner.hasNextLine()) {
                 System.out.println(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
             System.err.println("Error finding example file.");
         }
+        System.out.println();
         return scanner;
     }
 
