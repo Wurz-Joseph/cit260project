@@ -1,3 +1,4 @@
-Joseph Smith, Prophet, President, Date of Birth, Date Sustained, “Personal favorite Quote”
-Sidney Rigdon, Apostle, Elder, Date of Birth, Date Sustained, “Personal favorite Quote”
-Frederick G. Williams, Apostle, Elder, Date of Birth, Date Sustained, “Personal favorite Quote”
+Name, Office, Title, Date of Birth, Date Sustained, Favorite Quote
+Joseph Smith, Prophet, President, 1805-12-23, 1830-04-06, “The best way to obtain truth and wisdom is not to ask from books, but to go to God in prayer, and obtain divine teaching.”
+Sidney Rigdon, Apostle, Elder, 1793-02-19, 1833-03-18, “The object of our religion, is to make us more intelligent, than we could be without it”
+Frederick G. Williams, Apostle, Elder, 1787-1-28, 1833-03-18, “Personal favorite Quote”
