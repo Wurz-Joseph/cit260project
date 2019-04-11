@@ -1,8 +1,8 @@
 package cit260project;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Scanner;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.File;
@@ -42,8 +42,8 @@ public class GenAuthSubMenu extends Menu {
      */
     @Override
     protected MenuItem[] getMenuItems() {
-        return new MenuItem[] { new MenuItem('1', "Show list"),
-                new MenuItem('2', "Add to the file"), new MenuItem('R', "Return to Main Menu") };
+        return new MenuItem[] { new MenuItem('1', "Show list"), new MenuItem('2', "Add to the file"),
+                new MenuItem('R', "Return to Main Menu") };
     }
 
     /**
@@ -81,29 +81,30 @@ public class GenAuthSubMenu extends Menu {
     ArrayList<GeneralAuthority> apostles = new ArrayList<GeneralAuthority>();
 
     public void storeApostles(ArrayList<GeneralAuthority> apostles) {
-        try (Scanner input = new Scanner(System.in)) {
 
-            // prompt to add G.A. data and read in values.
-            System.out.print("Full Name: ");
-            String name = scanner.nextLine();
+        // prompt to add G.A. data and read in values.
+        System.out.print("Title: ");
+        String title = scanner.nextLine();
+        
+        System.out.print("Full Name: ");
+        String name = scanner.nextLine();
 
-            System.out.print("Office: ");
-            String office = scanner.nextLine();
+        System.out.print("Office: ");
+        String office = scanner.nextLine();
 
-            System.out.print("Date of Birth: ");
-            String dateOfBirth = scanner.nextLine();
+        System.out.print("Date of Birth: ");
+        String dateOfBirth = scanner.nextLine();
 
-            System.out.print("Date of Sustained: ");
-            String dateSustained = scanner.nextLine();
+        System.out.print("Date of Sustained: ");
+        String dateSustained = scanner.nextLine();
 
-            System.out.print("Favorite Quote: ");
-            String favoriteQuote = scanner.nextLine();
+        System.out.print("Favorite Quote: ");
+        String favoriteQuote = scanner.nextLine();
 
-            // create new G.A. object
-            GeneralAuthority ga = new GeneralAuthority(name, office, dateOfBirth, dateSustained, favoriteQuote);
-            // add object to apostles arrayList
-            apostles.add(ga);
-        }
+        // create new G.A. object
+        GeneralAuthority ga = new GeneralAuthority(title, name, office, dateOfBirth, dateSustained, favoriteQuote);
+        // add object to apostles arrayList
+        apostles.add(ga);
 
         try {
             // create/append to Apostles.txt
@@ -173,8 +174,37 @@ public class GenAuthSubMenu extends Menu {
      * @return User input of Seventy
      */
     private GeneralAuthority readSeventy(Scanner scanner) {
-        // will return seventy info
-        return null;
+        String name = null;
+        String office = null;
+        String title = null;
+        String birth = null;
+        String sustained = null;
+        String quote = null;
+
+        for (int i = 0; i < 2; i++) {
+
+            String key = scanner.next();
+
+            if (key.equals("Full Name: ")) {
+                name = scanner.next();
+            } else if (key.equals("Office: ")) {
+                office = scanner.next().trim();
+            } else if (key.equals("Title: ")) {
+                title = scanner.next().trim();
+            } else if (key.equals("Date of Birth: ")) {
+                birth = scanner.next().trim();
+            } else if (key.equals("Date Sustained: ")) {
+                sustained = scanner.next().trim();
+            } else if (key.equals("Favorite Quote: ")) {
+                quote = scanner.next().trim();
+            }
+        }
+
+        if (name == null || office == null || title == null || birth == null || sustained == null || quote == null) {
+            return null;
+        }
+
+        return new GeneralAuthority(name, office, title, birth, sustained, quote);
     }
 
 }

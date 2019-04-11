@@ -1,1 +1,7 @@
-
+[Title: Prophet
+Full name: President
+Office: John Johnson
+Date of Birth: June
+Date Sustained: April
+Favorite Quote: "Howdy, y'all!"
+]

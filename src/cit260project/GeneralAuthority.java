@@ -10,10 +10,15 @@ import java.io.FileNotFoundException;
  * 
  * @author
  */
+/**
+ * @author David Barney
+ *
+ */
 public class GeneralAuthority extends Menu {
     private String name;
     private String dateOfBirth;
     private String office;
+    private String gaTitle;
     private String dateSustained;
     private String favoriteQuote;
 
@@ -26,12 +31,13 @@ public class GeneralAuthority extends Menu {
      * 
      * @throws IllegalArgumentException if any of the parameters is null.
      */
-    public GeneralAuthority(String name, String office, String dateOfBirth, String dateSustained,
+    public GeneralAuthority(String name, String office, String gaTitle, String dateOfBirth, String dateSustained,
             String favoriteQuote) {
 
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.office = office;
+        this.gaTitle = gaTitle;
         this.dateSustained = dateSustained;
         this.favoriteQuote = favoriteQuote;
         // Enforce the "not null" part of our contract.
@@ -72,6 +78,13 @@ public class GeneralAuthority extends Menu {
     }
 
     /**
+     * @return the gaTitle
+     */
+    public String getGaTitle() {
+        return gaTitle;
+    }
+
+    /**
      * 
      * @return date sustained
      */
@@ -92,7 +105,7 @@ public class GeneralAuthority extends Menu {
      */
     @Override
     public String toString() {
-        return String.format("Full name: " + getName() + "\nOffice: " + getOffice() + "\nDate of Birth: "
+        return String.format("Title: " + getTitle() + "\nFull name: " + getName() + "\nOffice: " + getOffice() + "\nDate of Birth: "
                 + getDateOfBirth() + "\nDate Sustained: " + getDateSustained() + "\nFavorite Quote: \""
                 + getFavoriteQuote() + "\"\n");
     }
