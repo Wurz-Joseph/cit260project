@@ -20,7 +20,7 @@ public class MainMenu extends Menu {
      */
     @Override
     protected String getTitle() {
-        return "----------\nMAIN MENU\n----------";
+        return "\n----------\nMAIN MENU\n----------";
     }
 
     /**
@@ -69,7 +69,7 @@ public class MainMenu extends Menu {
             return false;
 
         default:
-            System.err.println("Invalid Entry");
+            System.err.println("\n\nInvalid Entry");
 
         }
 
@@ -98,7 +98,7 @@ public class MainMenu extends Menu {
                 System.out.println(scanner.nextLine());
             }
         } catch (FileNotFoundException e) {
-            System.err.println("Error finding example file.");
+            System.err.println("\n\nError finding example file.");
         }
         System.out.println();
         return scanner;
