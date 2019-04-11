@@ -32,7 +32,7 @@ public class GenAuthSubMenu extends Menu {
      */
     @Override
     protected String getDescription() {
-        return "Show list or add to file";
+        return "\nShow list or add to file";
     }
 
     /**
@@ -42,8 +42,8 @@ public class GenAuthSubMenu extends Menu {
      */
     @Override
     protected MenuItem[] getMenuItems() {
-        return new MenuItem[] { new MenuItem('1', "Show list of Prophets"),
-                new MenuItem('2', "Add a Prophet to the file"), new MenuItem('R', "Return to MainMenu") };
+        return new MenuItem[] { new MenuItem('1', "Show list"),
+                new MenuItem('2', "Add to the file"), new MenuItem('R', "Return to Main Menu") };
     }
 
     /**
