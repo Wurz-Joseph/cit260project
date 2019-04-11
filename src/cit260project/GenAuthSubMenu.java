@@ -85,7 +85,7 @@ public class GenAuthSubMenu extends Menu {
         // prompt to add G.A. data and read in values.
         System.out.print("Title: ");
         String title = scanner.nextLine();
-        
+
         System.out.print("Full Name: ");
         String name = scanner.nextLine();
 
@@ -185,12 +185,12 @@ public class GenAuthSubMenu extends Menu {
 
             String key = scanner.next();
 
-            if (key.equals("Full Name: ")) {
-                name = scanner.next();
+            if (key.equals("Title: ")) {
+                title = scanner.next();
+            } else if (key.equals("Full Name: ")) {
+                name = scanner.next().trim();
             } else if (key.equals("Office: ")) {
                 office = scanner.next().trim();
-            } else if (key.equals("Title: ")) {
-                title = scanner.next().trim();
             } else if (key.equals("Date of Birth: ")) {
                 birth = scanner.next().trim();
             } else if (key.equals("Date Sustained: ")) {
@@ -200,11 +200,11 @@ public class GenAuthSubMenu extends Menu {
             }
         }
 
-        if (name == null || office == null || title == null || birth == null || sustained == null || quote == null) {
+        if (title == null || name == null || office == null || birth == null || sustained == null || quote == null) {
             return null;
         }
 
-        return new GeneralAuthority(name, office, title, birth, sustained, quote);
+        return new GeneralAuthority(title, name, office, birth, sustained, quote);
     }
 
 }

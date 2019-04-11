@@ -105,7 +105,7 @@ public class GeneralAuthority extends Menu {
      */
     @Override
     public String toString() {
-        return String.format("Title: " + getTitle() + "\nFull name: " + getName() + "\nOffice: " + getOffice() + "\nDate of Birth: "
+        return String.format("Title: " + getGaTitle() + "\nFull name: " + getName() + "\nOffice: " + getOffice() + "\nDate of Birth: "
                 + getDateOfBirth() + "\nDate Sustained: " + getDateSustained() + "\nFavorite Quote: \""
                 + getFavoriteQuote() + "\"\n");
     }
