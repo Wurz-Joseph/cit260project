@@ -2,6 +2,7 @@ package cit260project;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -45,6 +46,7 @@ public class GenAuthSubMenu extends Menu {
 		return new MenuItem[] { new MenuItem('1', "Show list of Prophets"),
 				new MenuItem('2', "Add a Prophet to the file"), new MenuItem('R', "Return to MainMenu") };
 	}
+	
 
 	/**
 	 * Handle the user's menu selection.
@@ -84,6 +86,7 @@ public class GenAuthSubMenu extends Menu {
 		// prompt to add G.A. data and read in values.
 		System.out.print("Full Name: ");
 		String name = scanner.nextLine();
+		
 
 		System.out.print("Office: ");
 		String office = scanner.nextLine();
@@ -167,5 +170,6 @@ public class GenAuthSubMenu extends Menu {
 		// will return seventy info
 		return null;
 	}
+
 
 }

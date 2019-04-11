@@ -11,14 +11,12 @@ import java.io.FileNotFoundException;
  * 
  * @author
  */
-public class GeneralAuthority extends Menu{
+public class GeneralAuthority extends Menu {
 	private String name;
 	private Calendar dateOfBirth;
 	private String office;
 	private String dateSustained;
 	private String favoriteQuote;
-
-	
 
 	/**
 	 * Constructor for a Person object.
@@ -29,21 +27,21 @@ public class GeneralAuthority extends Menu{
 	 * 
 	 * @throws IllegalArgumentException if any of the parameters is null.
 	 */
-	public GeneralAuthority(String name, String office, String favoriteQuote) {
+	public GeneralAuthority(String name, Calendar dateOfBirth, String office, String favoriteQuote) {
 
 		this.name = name;
-		//this.dateOfBirth = dateOfBirth;
+	    this.dateOfBirth = dateOfBirth;
 		this.office = office;
-		//this.dateSustained = dateSustained;
+		// this.dateSustained = dateSustained;
 		this.favoriteQuote = favoriteQuote;
 		// Enforce the "not null" part of our contract.
 		if (name == null) {
 			throw new IllegalArgumentException("name cannot be null");
 		}
 
-		//if (dateOfBirth == null) {
-		//	throw new IllegalArgumentException("dateOfBrith cannot be null");
-		//}
+		if (dateOfBirth == null) {
+			throw new IllegalArgumentException("dateOfBrith cannot be null");
+		}
 
 	}
 
@@ -72,6 +70,7 @@ public class GeneralAuthority extends Menu{
 	public String getOffice() {
 		return office;
 	}
+
 	/**
 	 * 
 	 * @return date sustained
@@ -87,13 +86,14 @@ public class GeneralAuthority extends Menu{
 	public String getFavoriteQuote() {
 		return favoriteQuote;
 	}
+
 	/**
 	 * override the toString method for printing/storing objects to file.
 	 */
 	@Override
-    public String toString() { 
-        return String.format("Full name: " + getName() + "\nOffice: " + getOffice() + "\nFavorite Quote: \""  + getFavoriteQuote() + "\"\n"); 
-    } 
-
+	public String toString() {
+		return String.format("Full name: " + getName() + "\nOffice: " + getOffice() + "\nFavorite Quote: \""
+				+ getFavoriteQuote() + "\"\n");
+	}
 
 }
