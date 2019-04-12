@@ -58,6 +58,7 @@ public class GenAuthSubMenu extends Menu {
             // load from external file
             File prophetFile = new File("Apostles.txt");
             readProphet(prophetFile);
+        	
             break;
         case '2':
             storeApostles(apostles);
@@ -140,7 +141,7 @@ public class GenAuthSubMenu extends Menu {
 
             // if file is empty display error. Else display list of Apostles.
             if (file.length() == 0) {
-                System.err.println("No prophets currently in the database. Try adding one to the file.");
+                System.err.println("\nNo prophets currently in the database. Try adding one to the file.\n");
             } else {
                 while (scanner.hasNextLine()) {
                     System.out.println(scanner.nextLine());
@@ -173,37 +174,8 @@ public class GenAuthSubMenu extends Menu {
      * @return User input of Seventy
      */
     private GeneralAuthority readSeventy(Scanner scanner) {
-        String name = null;
-        String office = null;
-        String title = null;
-        String birth = null;
-        String sustained = null;
-        String quote = null;
-
-        for (int i = 0; i < 2; i++) {
-
-            String key = scanner.next();
-
-            if (key.equals("Title: ")) {
-                title = scanner.next();
-            } else if (key.equals("Full Name: ")) {
-                name = scanner.next().trim();
-            } else if (key.equals("Office: ")) {
-                office = scanner.next().trim();
-            } else if (key.equals("Date of Birth: ")) {
-                birth = scanner.next().trim();
-            } else if (key.equals("Date Sustained: ")) {
-                sustained = scanner.next().trim();
-            } else if (key.equals("Favorite Quote: ")) {
-                quote = scanner.next().trim();
-            }
-        }
-
-        if (title == null || name == null || office == null || birth == null || sustained == null || quote == null) {
-            return null;
-        }
-
-        return new GeneralAuthority(title, name, office, birth, sustained, quote);
+    	// will return seventy info
+        return null;
     }
 
 

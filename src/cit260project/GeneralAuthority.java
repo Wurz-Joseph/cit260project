@@ -1,9 +1,7 @@
 package cit260project;
 
 
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
+
 
 /**
  * The General Authority model in our program.
