@@ -174,11 +174,9 @@ public class GenAuthSubMenu extends Menu {
      * @return User input of Seventy
      */
     private GeneralAuthority readSeventy(Scanner scanner) {
-<<<<<<< HEAD
-    	// will return seventy info
-=======
+
         // will return seventy info
->>>>>>> branch 'master' of https://github.com/josephwurz/cit260project.git
+
         return null;
     }
 
